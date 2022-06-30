@@ -1,0 +1,293 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".kitchenlight2">
+
+    <com.google.android.material.appbar.MaterialToolbar
+
+        android:id="@+id/add_room_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2A2A37"
+        app:navigationIcon="@drawable/ic_strelka"
+        app:title="Kitchen"
+        app:titleCentered="true"
+        app:titleTextColor="@color/white"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-1dp"
+        tools:layout_editor_absoluteY="-1dp">
+
+        <ImageButton
+            android:id="@+id/iconadd_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="210dp"
+            android:background="@color/disabled"
+            android:contentDescription="Kitchen"
+            android:src="@drawable/ic_icon_add" />
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        app:srcCompat="@drawable/frame_66"
+        tools:layout_editor_absoluteX="0"
+        tools:layout_editor_absoluteY="55dp"/>
+
+    <ImageButton
+        android:id="@+id/light_btn"
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:background="#0000"
+        android:contentDescription="Light"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_light"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="75dp" />
+
+    <TextView
+        android:id="@+id/light_text"
+        android:layout_width="48dp"
+        android:layout_height="24dp"
+        android:text="light"
+        android:textColor="#984E4F"
+        android:textSize="16dp"
+        android:textStyle="normal"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="115dp" />
+
+    <ImageButton
+        android:id="@+id/termostat_btn"
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:background="#0000"
+        android:contentDescription="Light"
+        android:onClick="click_thermostat"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_icon"
+        tools:layout_editor_absoluteX="110dp"
+        tools:layout_editor_absoluteY="75dp" />
+
+    <TextView
+        android:id="@+id/termostat_text"
+        android:layout_width="78dp"
+        android:layout_height="24dp"
+        android:text="Termostat"
+        android:textSize="16dp"
+        android:textStyle="normal"
+        tools:layout_editor_absoluteX="90dp"
+        tools:layout_editor_absoluteY="115dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="220dp"
+            android:layout_marginTop="70dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="64px"
+                android:textColor="@color/black"
+                android:textStyle="normal"
+                android:layout_marginTop="110dp"
+                android:text="Main Light"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="32px"
+                android:textColor="@color/black"
+                android:text="room name"/>
+        </LinearLayout>
+
+        <ImageButton
+            android:id="@+id/on_btn"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="160dp"
+            android:background="@drawable/ic_button_onoff"
+            tools:ignore="SpeakableTextPresentCheck" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/light_strenght_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="110dp"
+            android:text="0"
+            android:textColor="#984E4F"
+            android:textSize="54dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="130dp"
+            android:text="lm"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:layout_gravity="center"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="70dp"
+            android:layout_marginRight="10dp"
+            android:textStyle="bold"
+            android:text="light strenght"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="410dp"
+        android:layout_height="350dp"
+        android:gravity="bottom|center"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <Button
+            android:id="@+id/btn16"
+            android:layout_width="975px"
+            android:layout_height="20dp"
+            android:backgroundTint="@color/white"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/btn15"
+            android:layout_width="950px"
+            android:layout_height="20dp"
+            android:backgroundTint="@color/white"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/btn14"
+            android:layout_width="925px"
+            android:layout_height="20dp"
+            android:backgroundTint="@color/white"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btn13"
+            android:layout_width="900px"
+            android:layout_height="20dp"
+            android:backgroundTint="@color/white"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btn12"
+            android:layout_width="875px"
+            android:layout_height="20dp"
+            android:backgroundTint="@color/white"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/btn11"
+            android:layout_width="850px"
+            android:layout_height="20dp"
+            android:backgroundTint="@color/white"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btn10"
+            android:layout_width="825px"
+            android:layout_height="20dp"
+            android:backgroundTint="@color/white"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/btn9"
+            android:layout_width="800px"
+            android:layout_height="20dp"
+            android:backgroundTint="@color/white"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/btn8"
+            android:layout_width="775px"
+            android:layout_height="20dp"
+            android:backgroundTint="@color/white"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btn7"
+            android:layout_width="750px"
+            android:layout_height="20dp"
+            android:backgroundTint="@color/white"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btn6"
+            android:layout_width="725px"
+            android:layout_height="20dp"
+            android:backgroundTint="@color/white"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/btn5"
+            android:layout_width="700px"
+            android:layout_height="20dp"
+            android:backgroundTint="@color/white"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btn4"
+            android:layout_width="675px"
+            android:layout_height="20dp"
+            android:backgroundTint="@color/white"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="650px"
+            android:layout_height="20dp"
+            android:backgroundTint="@color/white"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="625px"
+            android:layout_height="20dp"
+            android:backgroundTint="@color/white"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="600px"
+            android:layout_height="20dp"
+            android:backgroundTint="@color/white"
+            tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

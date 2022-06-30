@@ -1,0 +1,349 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".addroom">
+
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:id="@+id/add_room_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2A2A37"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:title="Add Room"
+        app:titleCentered="true"
+        app:titleTextColor="@color/white"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteY="-1dp">
+
+        <ImageButton
+            android:id="@+id/imgBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:background="@color/disabled"
+            android:onClick="strelka"
+            android:src="@drawable/ic_icon_back" />
+
+
+        <Button
+            android:id="@+id/add_room_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:backgroundTint="#2A2A37"
+            android:text="Save"
+            android:textColor="@color/white"
+            android:textStyle="italic" />
+
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginRight="15dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Enter Room's name"
+            android:textColor="#979797"
+            android:textSize="42px" />
+
+        <EditText
+            android:id="@+id/enter_room_edit"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:background="@drawable/ic_rectangle_13"
+            android:hint="Room Name" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select Room's icon"
+                android:textColor="#979797"
+                android:textSize="42px" />
+
+        </LinearLayout>
+
+        <GridLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="10dp"
+            android:columnCount="3"
+            android:rowCount="3">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/kitchen_btn"
+                    android:layout_width="280px"
+                    android:layout_height="280px"
+                    android:background="@drawable/ic_frame_57"
+                    android:contentDescription="Kitchen"
+                    android:onClick="click_kitchen"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_1" />
+
+                <TextView
+                    android:id="@+id/kitchen_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kitchen"
+                    android:textColor="#984E4F"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/badroom_btn"
+                    android:layout_width="280px"
+                    android:layout_height="280px"
+                    android:background="@drawable/ic_frame_58"
+                    android:contentDescription="Kitchen"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_2" />
+
+                <TextView
+                    android:id="@+id/Badroom_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Badroom"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/bathroom_btn"
+                    android:layout_width="280px"
+                    android:layout_height="280px"
+                    android:background="@drawable/ic_frame_58"
+                    android:contentDescription="Bathroom"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_3" />
+
+                <TextView
+                    android:id="@+id/Bathroom_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Bathroom"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/office_btn"
+                    android:layout_width="280px"
+                    android:layout_height="280px"
+                    android:background="@drawable/ic_frame_58"
+                    android:contentDescription="Kitchen"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_4" />
+
+                <TextView
+                    android:id="@+id/office_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Office"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/tvroom_btn"
+                    android:layout_width="280px"
+                    android:layout_height="280px"
+                    android:background="@drawable/ic_frame_58"
+                    android:contentDescription="TV Room"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_5" />
+
+                <TextView
+                    android:id="@+id/tvroom_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Tv Room"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/livingroom_btn"
+                    android:layout_width="280px"
+                    android:layout_height="280px"
+                    android:background="@drawable/ic_frame_58"
+                    android:contentDescription="Living Room"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_3" />
+
+                <TextView
+                    android:id="@+id/Livingroom_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Living Room"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/garage_btn"
+                    android:layout_width="280px"
+                    android:layout_height="280px"
+                    android:background="@drawable/ic_frame_58"
+                    android:contentDescription="Garage"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_4" />
+
+                <TextView
+                    android:id="@+id/garage_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Garage"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/Toilet_btn"
+                    android:layout_width="280px"
+                    android:layout_height="280px"
+                    android:background="@drawable/ic_frame_58"
+                    android:contentDescription="Toilet"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_5" />
+
+                <TextView
+                    android:id="@+id/toilet_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Toilet"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginTop="30dp"
+                android:clickable="true"
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/kidroom_btn"
+                    android:layout_width="280px"
+                    android:layout_height="280px"
+                    android:background="@drawable/ic_frame_58"
+                    android:contentDescription="Kid Room"
+                    android:scaleType="centerInside"
+                    android:src="@drawable/ic_3" />
+
+                <TextView
+                    android:id="@+id/kidroom_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Kid Room"
+                    android:textColor="@color/black"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+
+        </GridLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

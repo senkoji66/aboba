@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".kitchentermostat">
+
+    <com.google.android.material.appbar.MaterialToolbar
+
+        android:id="@+id/add_room_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#2A2A37"
+        app:navigationIcon="@drawable/ic_strelka"
+        app:title="Kitchen"
+        app:titleCentered="true"
+        app:titleTextColor="@color/white"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="-1dp"
+        tools:layout_editor_absoluteY="-1dp">
+
+        <ImageButton
+            android:id="@+id/iconadd_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="220dp"
+            android:background="@color/disabled"
+            android:contentDescription="Kitchen"
+            android:src="@drawable/ic_icon_add" />
+
+    </com.google.android.material.appbar.MaterialToolbar>
+
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="wrap_content"
+        android:layout_height="90dp"
+        app:srcCompat="@drawable/frame_66"
+        tools:layout_editor_absoluteX="0"
+        tools:layout_editor_absoluteY="55dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/light_btn"
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:background="#0000"
+        android:contentDescription="Light"
+        android:onClick="click_light"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_light"
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="75dp" />
+
+    <TextView
+        android:id="@+id/light_text"
+        android:layout_width="48dp"
+        android:layout_height="24dp"
+        android:text="light"
+        android:textColor="#984E4F"
+        android:textSize="16dp"
+        android:textStyle="normal"
+        tools:layout_editor_absoluteX="20dp"
+        tools:layout_editor_absoluteY="115dp"
+        tools:ignore="MissingConstraints" />
+
+    <ImageButton
+        android:id="@+id/termostat_btn"
+        android:layout_width="100px"
+        android:layout_height="100px"
+        android:background="#0000"
+        android:contentDescription="Light"
+        android:scaleType="centerInside"
+        android:src="@drawable/ic_icon"
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck"
+        tools:layout_editor_absoluteX="110dp"
+        tools:layout_editor_absoluteY="75dp" />
+
+    <TextView
+        android:id="@+id/termostat_text"
+        android:layout_width="78dp"
+        android:layout_height="24dp"
+        android:text="Thermostat"
+        android:textSize="16dp"
+        android:textStyle="normal"
+        tools:layout_editor_absoluteX="90dp"
+        tools:layout_editor_absoluteY="115dp"
+        tools:ignore="MissingConstraints" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="40dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        tools:ignore="MissingConstraints"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        tools:ignore="MissingConstraints">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="64px"
+            android:textColor="@color/black"
+            android:textStyle="normal"
+            android:layout_marginTop="170dp"
+            android:layout_marginLeft="20dp"
+            android:text="Thermostat"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="32px"
+            android:textColor="@color/black"
+            android:layout_marginLeft="20dp"
+            android:text="room name"/>
+    </LinearLayout>
+
+    <ImageButton
+        android:id="@+id/oni_btn"
+        android:layout_width="60dp"
+        android:layout_height="30dp"
+        android:background="@drawable/ic_resource_switch"
+        tools:ignore="MissingConstraints,TouchTargetSizeCheck,SpeakableTextPresentCheck"
+        tools:layout_editor_absoluteX="320dp"
+        tools:layout_editor_absoluteY="170dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        tools:ignore="MissingConstraints">
+
+
+
+        <LinearLayout
+            android:layout_width="151dp"
+            android:layout_height="483dp"
+            android:layout_gravity="center|left"
+            android:layout_marginTop="150dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="120dp"
+                android:layout_height="270dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/temperature_txt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="210dp"
+                    android:text="0"
+                    android:textColor="#984E4F"
+                    android:textSize="56dp"
+                    android:textStyle="bold" />
+
+                <ImageView
+                    android:layout_width="50px"
+                    android:layout_height="50px"
+                    android:layout_marginTop="210dp"
+                    android:background="@drawable/ic_ellipse_17" />
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Temperature, ℃"
+                android:textSize="14dp"
+                android:textStyle="bold" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/heating_btn"
+                    android:layout_width="45dp"
+                    android:layout_height="45dp"
+                    android:layout_marginStart="8dp"
+                    android:background="@drawable/ic_heating"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck"
+                    tools:layout_editor_absoluteY="25dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="80dp"
+                    android:layout_marginBottom="103dp"
+                    android:text="Cool"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <ImageButton
+                    android:id="@+id/cool_btn"
+                    android:layout_width="79dp"
+                    android:layout_height="76dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/ic_cool"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:ignore="SpeakableTextPresentCheck,SpeakableTextPresentCheck" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="8dp"
+                    android:text="Heating"
+                    android:textSize="13dp"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    tools:layout_editor_absoluteY="74dp" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        </LinearLayout>
+
+
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="vertical"
+           android:layout_gravity="bottom">
+
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="Fan"
+               android:textStyle="bold"
+               android:textSize="15dp"/>
+
+           <LinearLayout
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:orientation="horizontal">
+
+               <androidx.appcompat.widget.AppCompatSeekBar
+                   android:layout_width="320dp"
+                   android:layout_height="20dp"
+                   android:background="@drawable/ic_rectangle_17" />
+           </LinearLayout>
+       </LinearLayout>
+
+
+
+
+
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
